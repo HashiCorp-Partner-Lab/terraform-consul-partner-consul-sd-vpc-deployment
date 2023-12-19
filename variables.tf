@@ -33,13 +33,31 @@ variable "route_id" {
 }
 
 variable "hcp_client_id" {
+  description = "Your HashiCorp Cloud Platform client ID."
   type = string
 }
 
 variable "hcp_client_secret" {
+  description = "The client secret key associated with your HCP account."
   type = string
 }
 
 variable "hcp_project_id" {
+  description = "The project key for your HCP account."
+  type = string
+}
+
+variable "access_key" {
+  description = "Your AWS access key ID."
+  type = string
+}
+
+variable "secret_key" {
+  description = "Your AWS secret access key."
+  type = string
+}
+
+variable "token" {
+  description = "Your AWS session token (if using temporary security credentials)."
   type = string
 }

@@ -30,35 +30,17 @@ Certainly! Here are the requirements and recommended environment variables for d
     - `hcp_client_id`: Your HCP client ID.
     - `hcp_client_secret`: The HCP client secret key generated for your account.
     - `hcp_project_id`: The HCP project key associated with your account.
+    
+## Requirements
 
-## Recommended Environment Variables:
-
-To streamline the Terraform deployment process, it is recommended to set the following environment variables:
-
-```bash
-export TF_VAR_hcp_client_id=<your HCP client id>
-export TF_VAR_hcp_client_secret=<your HCP client secret>
-export TF_VAR_hcp_project_id=<your HCP project id>
-export AWS_ACCESS_KEY_ID=<your AWS access key id>
-export AWS_SECRET_ACCESS_KEY=<your AWS secret access key>
-export AWS_SESSION_TOKEN=<your AWS session token>
-```
-
-- `TF_VAR_hcp_client_id`: Your HashiCorp Cloud Platform client ID.
-- `TF_VAR_hcp_client_secret`: The client secret key associated with your HCP account.
-- `TF_VAR_hcp_project_id`: The project key for your HCP account.
-- `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
-- `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
-- `AWS_SESSION_TOKEN`: Your AWS session token (if using temporary security credentials).
-
-Ensure that these environment variables are set before running the Terraform commands to simplify the authentication and configuration process.
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| [aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) | n/a |
-| [hcp](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_hcp"></a> [hcp](#provider\_hcp) | n/a |
 
 ## Modules
 
@@ -88,26 +70,32 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | Your AWS access key ID. | `string` | n/a | yes |
 | <a name="input_cloud_provider"></a> [cloud\_provider](#input\_cloud\_provider) | The cloud provider of the HCP HVN and Consul cluster. | `string` | `"aws"` | no |
 | <a name="input_cluster_id"></a> [cluster\_id](#input\_cluster\_id) | The ID of the HCP Consul cluster. | `string` | `"partner-hcp-consul"` | no |
+| <a name="input_hcp_client_id"></a> [hcp\_client\_id](#input\_hcp\_client\_id) | Your HashiCorp Cloud Platform client ID. | `string` | n/a | yes |
+| <a name="input_hcp_client_secret"></a> [hcp\_client\_secret](#input\_hcp\_client\_secret) | The client secret key associated with your HCP account. | `string` | n/a | yes |
+| <a name="input_hcp_project_id"></a> [hcp\_project\_id](#input\_hcp\_project\_id) | The project key for your HCP account. | `string` | n/a | yes |
 | <a name="input_hvn_id"></a> [hvn\_id](#input\_hvn\_id) | The ID of the HCP HVN. | `string` | `"partner-hvn"` | no |
 | <a name="input_peering_id"></a> [peering\_id](#input\_peering\_id) | The ID of the HCP peering connection. | `string` | `"partner-peering"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the HCP HVN and Consul cluster. | `string` | `"us-west-2"` | no |
 | <a name="input_route_id"></a> [route\_id](#input\_route\_id) | The ID of the HCP HVN route. | `string` | `"partner-hvn-route"` | no |
+| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | Your AWS secret access key. | `string` | n/a | yes |
+| <a name="input_token"></a> [token](#input\_token) | Your AWS session token (if using temporary security credentials). | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_aws_security_group_id"></a> [aws\_security\_group\_id](#output\_aws\_security\_group\_id) | The ID of the AWS security group. |
-| <a name="output_consul_ca_file"></a> [consul\_ca\_file](#output\_consul\_ca\_file) | The CA file for Consul. |
-| <a name="output_consul_cluster_id"></a> [consul\_cluster\_id](#output\_consul\_cluster\_id) | The ID of the Consul cluster. |
-| <a name="output_consul_config_file"></a> [consul\_config\_file](#output\_consul\_config\_file) | The configuration file for Consul. |
-| <a name="output_consul_private_endpoint_url"></a> [consul\_private\_endpoint\_url](#output\_consul\_private\_endpoint\_url) | The private endpoint URL for Consul. |
-| <a name="output_consul_region"></a> [consul\_region](#output\_consul\_region) | The region of the Consul cluster. |
-| <a name="output_consul_root_token_accessor_id"></a> [consul\_root\_token\_accessor\_id](#output\_consul\_root\_token\_accessor\_id) | The accessor ID for the Consul root token. |
-| <a name="output_consul_root_token_secret_id"></a> [consul\_root\_token\_secret\_id](#output\_consul\_root\_token\_secret\_id) | The secret ID for the Consul root token. |
-| <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | The CIDR block of the VPC. |
-| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC. |
-| <a name="output_vpc_subnet_id"></a> [vpc\_subnet\_id](#output\_vpc\_subnet\_id) | The ID of the VPC subnet. |
+| <a name="output_aws_security_group_id"></a> [aws\_security\_group\_id](#output\_aws\_security\_group\_id) | n/a |
+| <a name="output_consul_ca_file"></a> [consul\_ca\_file](#output\_consul\_ca\_file) | n/a |
+| <a name="output_consul_cluster_id"></a> [consul\_cluster\_id](#output\_consul\_cluster\_id) | n/a |
+| <a name="output_consul_config_file"></a> [consul\_config\_file](#output\_consul\_config\_file) | n/a |
+| <a name="output_consul_private_endpoint_url"></a> [consul\_private\_endpoint\_url](#output\_consul\_private\_endpoint\_url) | n/a |
+| <a name="output_consul_region"></a> [consul\_region](#output\_consul\_region) | n/a |
+| <a name="output_consul_root_token_accessor_id"></a> [consul\_root\_token\_accessor\_id](#output\_consul\_root\_token\_accessor\_id) | n/a |
+| <a name="output_consul_root_token_secret_id"></a> [consul\_root\_token\_secret\_id](#output\_consul\_root\_token\_secret\_id) | n/a |
+| <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | n/a |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | n/a |
+| <a name="output_vpc_subnet_id"></a> [vpc\_subnet\_id](#output\_vpc\_subnet\_id) | n/a |
 <!-- END_TF_DOCS -->"
