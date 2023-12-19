@@ -30,7 +30,7 @@ Certainly! Here are the requirements and recommended environment variables for d
     - `hcp_client_id`: Your HCP client ID.
     - `hcp_client_secret`: The HCP client secret key generated for your account.
     - `hcp_project_id`: The HCP project key associated with your account.
-    
+
 ## Requirements
 
 No requirements.
@@ -70,7 +70,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | Your AWS access key ID. | `string` | n/a | yes |
 | <a name="input_cloud_provider"></a> [cloud\_provider](#input\_cloud\_provider) | The cloud provider of the HCP HVN and Consul cluster. | `string` | `"aws"` | no |
 | <a name="input_cluster_id"></a> [cluster\_id](#input\_cluster\_id) | The ID of the HCP Consul cluster. | `string` | `"partner-hcp-consul"` | no |
 | <a name="input_hcp_client_id"></a> [hcp\_client\_id](#input\_hcp\_client\_id) | Your HashiCorp Cloud Platform client ID. | `string` | n/a | yes |
@@ -80,8 +79,6 @@ No modules.
 | <a name="input_peering_id"></a> [peering\_id](#input\_peering\_id) | The ID of the HCP peering connection. | `string` | `"partner-peering"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the HCP HVN and Consul cluster. | `string` | `"us-west-2"` | no |
 | <a name="input_route_id"></a> [route\_id](#input\_route\_id) | The ID of the HCP HVN route. | `string` | `"partner-hvn-route"` | no |
-| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | Your AWS secret access key. | `string` | n/a | yes |
-| <a name="input_token"></a> [token](#input\_token) | Your AWS session token (if using temporary security credentials). | `string` | n/a | yes |
 
 ## Outputs
 
