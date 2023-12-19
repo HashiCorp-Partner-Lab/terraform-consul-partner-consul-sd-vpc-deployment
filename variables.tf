@@ -46,3 +46,5 @@ variable "hcp_project_id" {
   description = "The project key for your HCP account."
   type = string
 }
+
+#TODO set defaults for the hcp details
