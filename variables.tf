@@ -1,6 +1,5 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MIT
-
 variable "hvn_id" {
   description = "The ID of the HCP HVN."
   type        = string
@@ -31,22 +30,27 @@ variable "hpl_hcp_hvn_id" {
   type        = string
   default     = "partner-hvn-route"
 }
-
 variable "hcp_client_id" {
   description = "Your HashiCorp Cloud Platform client ID."
   type = string
   default = "value"
 }
-
 variable "hcp_client_secret" {
   description = "The client secret key associated with your HCP account."
   type = string
   default = "value"
 }
-
 variable "hpl_hcp_project_id" {
   description = "The project key for your HCP account."
   type = string
 }
-
-#TODO set defaults for the hcp details
+variable "aws_access_key" {
+  description = "AWS Access Key ID for the account to be peered to"
+  type = string
+  sensitive = false
+}
+variable "aws_secret_key" {
+  description = "AWS Secret Access Key for the account to be peered to"
+  type = string
+  sensitive = true
+}
