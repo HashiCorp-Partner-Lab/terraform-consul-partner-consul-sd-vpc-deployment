@@ -26,7 +26,7 @@ variable "peering_id" {
   type        = string
   default     = "partner-peering"
 }
-variable "route_id" {
+variable "hpl_hcp_hvn_id" {
   description = "The ID of the HCP HVN route."
   type        = string
   default     = "partner-hvn-route"
@@ -35,14 +35,16 @@ variable "route_id" {
 variable "hcp_client_id" {
   description = "Your HashiCorp Cloud Platform client ID."
   type = string
+  default = "value"
 }
 
 variable "hcp_client_secret" {
   description = "The client secret key associated with your HCP account."
   type = string
+  default = "value"
 }
 
-variable "hcp_project_id" {
+variable "hpl_hcp_project_id" {
   description = "The project key for your HCP account."
   type = string
 }

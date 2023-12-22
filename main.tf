@@ -8,7 +8,7 @@ provider "aws" {
 provider "hcp" {
   client_id     = var.hcp_client_id
   client_secret = var.hcp_client_secret
-  project_id    = var.hcp_project_id
+  project_id    = var.hpl_hcp_project_id
 }
 
 resource "hcp_hvn" "partner_hvn" {
