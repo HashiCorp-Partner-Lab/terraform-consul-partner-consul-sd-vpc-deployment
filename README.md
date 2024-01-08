@@ -23,7 +23,29 @@ Certainly! Here are the requirements and recommended environment variables for d
   - An active AWS account is required to provision the infrastructure components.
   - Ensure that the AWS access credentials provided have sufficient permissions to create VPCs, subnets, security groups, and other necessary resources.
 
-No requirements.
+## AWS Permisions Required
+You AWS Key/Secret will require the following permisions:
+
+| AWS Permission                                | Purpose                                      |
+|-----------------------------------------------|----------------------------------------------|
+| `ec2:DescribeVpcs`                            | Describe Virtual Private Clouds (VPCs)       |
+| `ec2:DescribeSecurityGroups`                  | Describe security groups                     |
+| `ec2:CreateSecurityGroup`                     | Create security groups for EC2 instances     |
+| `ec2:DescribeImages`                          | Describe images (AMIs)                       |
+| `ec2:DescribeSubnets`                         | Describe subnets                             |
+| `ec2:AuthorizeSecurityGroupIngress`           | Authorize ingress rules for security groups  |
+| `ec2:RevokeSecurityGroupIngress`              | Revoke ingress rules for security groups     |
+| `ec2:AuthorizeSecurityGroupEgress`            | Authorize egress rules for security groups   |
+| `ec2:RevokeSecurityGroupEgress`               | Revoke egress rules for security groups      |
+| `ec2:CreateRouteTable`                        | Create route tables for VPCs                 |
+| `ec2:CreateRoute`                             | Create routes in route tables                |
+| `ec2:CreateInternetGateway`                   | Create internet gateways for VPCs            |
+| `ec2:AttachInternetGateway`                   | Attach internet gateways to VPCs             |
+| `ec2:CreateVpcPeeringConnection`              | Create VPC peering connections               |
+| `ec2:AcceptVpcPeeringConnection`              | Accept VPC peering connections               |
+| `ec2:DescribeVpcPeeringConnections`           | Describe VPC peering connections             |
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
