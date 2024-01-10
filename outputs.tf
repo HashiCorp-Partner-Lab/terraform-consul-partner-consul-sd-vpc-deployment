@@ -22,13 +22,16 @@ output "consul_private_endpoint_url" {
   value = hcp_consul_cluster.partner_hcp.consul_private_endpoint_url
 }
 
+output "consul_public_endpoint_url" {
+  value = hcp_consul_cluster.partner_hcp.consul_public_endpoint_url
+}
+
 output "consul_root_token_accessor_id" {
   value = hcp_consul_cluster.partner_hcp.consul_root_token_accessor_id
 }
 
 output "consul_root_token_secret_id" {
   value = hcp_consul_cluster.partner_hcp.consul_root_token_secret_id
-  sensitive = true
 }
 
 output "consul_cluster_id" {
