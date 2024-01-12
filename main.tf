@@ -47,5 +47,6 @@ resource "tfe_variable" "consul_root_token" {
   value           = hcp_consul_cluster.partner_hcp.consul_root_token_secret_id
   description     = "Consul Root Token"
   variable_set_id = tfe_variable_set.consul_vs.id
+  sensitive       = true
   category        = "terraform"
 }
