@@ -1,5 +1,5 @@
 ## Overview
-This Terraform configuration is designed to provision the foundational infrastructure for a partner environment on HashiCorp Cloud Platform (HCP). The infrastructure includes a Virtual Private Cloud (VPC), HashiCorp Consul Cluster, and necessary networking components to establish a secure and scalable partner environment
+This Terraform configuration is designed to provision the foundational infrastructure for a partner environment on HashiCorp Cloud Platform (HCP). The infrastructure includes a Virtual Private Cloud (VPC), HashiCorp Consul Cluster, and necessary networking components to establish a secure and scalable partner environment. 
 
 ## Components
 
@@ -8,14 +8,8 @@ This Terraform configuration is designed to provision the foundational infrastru
 - Subnet for HashiCorp Consul deployment within the VPC.
 - Internet Gateway to enable communication with the external world.
 
-### HCP HVN (HashiCorp Virtual Network):
-- The HashiCorp Virtual Network (HVN) is created to serve as the foundation for HCP services.
-- Network peering connection to connect the HVN with the partner's AWS VPC.
-
 ### Consul Cluster:
 - An empty HashiCorp Consul Cluster is provisioned within
-
-Certainly! Here are the requirements and recommended environment variables for deploying the Terraform configuration:
 
 ## Requirements
 
@@ -77,10 +71,10 @@ No modules.
 | [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection_accepter) | resource |
 | [hcp_aws_network_peering.peer](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/aws_network_peering) | resource |
 | [hcp_consul_cluster.partner_hcp](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/consul_cluster) | resource |
-| [hcp_hvn.partner_hvn](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/hvn) | resource |
 | [hcp_hvn_route.peer_route](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/hvn_route) | resource |
 | [aws_arn.peer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/arn) | data source |
 | [aws_route_table.peer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route_table) | data source |
+| [hcp_hvn.partner_hvn](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/data-sources/hvn) | data source |
 
 ## Inputs
 
@@ -96,7 +90,7 @@ No modules.
 | <a name="input_hpl_hcp_project_id"></a> [hpl\_hcp\_project\_id](#input\_hpl\_hcp\_project\_id) | The project key for your HCP account. | `string` | `"value"` | no |
 | <a name="input_hvn_id"></a> [hvn\_id](#input\_hvn\_id) | The ID of the HCP HVN. | `string` | `"partner-hvn"` | no |
 | <a name="input_peering_id"></a> [peering\_id](#input\_peering\_id) | The ID of the HCP peering connection. | `string` | `"partner-peering"` | no |
-| <a name="input_region"></a> [region](#input\_region) | The region of the HCP HVN and Consul cluster. | `string` | `"us-west-2"` | no |
+| <a name="input_region"></a> [region](#input\_region) | The region of the HCP HVN and Consul cluster. | `string` | `"eu-west-2"` | no |
 
 ## Outputs
 

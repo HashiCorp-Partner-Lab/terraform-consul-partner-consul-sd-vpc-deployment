@@ -11,10 +11,8 @@ provider "hcp" {
   project_id    = var.hpl_hcp_project_id
 }
 
-resource "hcp_hvn" "partner_hvn" {
-  hvn_id         = var.hvn_id
-  cloud_provider = var.cloud_provider
-  region         = var.region
+data "hcp_hvn" "partner_hvn" {
+  hvn_id = var.hvn_id
 }
 
 resource "hcp_consul_cluster" "partner_hcp" {
