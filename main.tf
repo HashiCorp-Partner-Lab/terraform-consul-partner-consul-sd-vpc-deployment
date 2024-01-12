@@ -12,7 +12,7 @@ provider "hcp" {
 }
 
 data "hcp_hvn" "partner_hvn" {
-  hvn_id = var.hvn_id
+  hvn_id = var.hpl_hcp_hvn_id
 }
 
 resource "hcp_consul_cluster" "partner_hcp" {

@@ -88,7 +88,6 @@ No modules.
 | <a name="input_hcp_client_secret"></a> [hcp\_client\_secret](#input\_hcp\_client\_secret) | The client secret key associated with your HCP account. | `string` | `"value"` | no |
 | <a name="input_hpl_hcp_hvn_id"></a> [hpl\_hcp\_hvn\_id](#input\_hpl\_hcp\_hvn\_id) | The ID of the HCP HVN route. | `string` | `"partner-hvn-route"` | no |
 | <a name="input_hpl_hcp_project_id"></a> [hpl\_hcp\_project\_id](#input\_hpl\_hcp\_project\_id) | The project key for your HCP account. | `string` | `"value"` | no |
-| <a name="input_hvn_id"></a> [hvn\_id](#input\_hvn\_id) | The ID of the HCP HVN. | `string` | `"partner-hvn"` | no |
 | <a name="input_peering_id"></a> [peering\_id](#input\_peering\_id) | The ID of the HCP peering connection. | `string` | `"partner-peering"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the HCP HVN and Consul cluster. | `string` | `"eu-west-2"` | no |
 

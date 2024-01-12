@@ -1,11 +1,5 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MIT
-variable "hvn_id" {
-  description = "The ID of the HCP HVN."
-  type        = string
-  default     = "partner-hvn"
-}
-
 variable "cluster_id" {
   description = "The ID of the HCP Consul cluster."
   type        = string
