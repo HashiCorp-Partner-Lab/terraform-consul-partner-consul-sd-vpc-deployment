@@ -59,3 +59,9 @@ variable "aws_secret_key" {
   type = string
   sensitive = true
 }
+
+variable "hpl_tfc_organisation_name" {
+  type        = string
+  description = "TFC Org Name"
+  default     = "TFC Org"
+}

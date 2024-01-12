@@ -32,6 +32,7 @@ output "consul_root_token_accessor_id" {
 
 output "consul_root_token_secret_id" {
   value = hcp_consul_cluster.partner_hcp.consul_root_token_secret_id
+  sensitive = true
 }
 
 output "consul_cluster_id" {
