@@ -36,7 +36,7 @@ resource "aws_security_group_rule" "allow_lan_consul_gossip" {
   description       = local.hcp_consul_security_groups[count.index].description
   protocol          = local.hcp_consul_security_groups[count.index].protocol
   security_group_id = aws_security_group.hcp_consul.id
-  cidr_blocks       = [hcp_hvn.partner_hvn.cidr_block]
+  cidr_blocks       = [data.hcp_hvn.partner_hvn.cidr_block]
   from_port         = local.hcp_consul_security_groups[count.index].port
   to_port           = local.hcp_consul_security_groups[count.index].port
   type              = "ingress"

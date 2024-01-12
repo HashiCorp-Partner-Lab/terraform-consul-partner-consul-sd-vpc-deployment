@@ -16,7 +16,7 @@ data "hcp_hvn" "partner_hvn" {
 }
 
 resource "hcp_consul_cluster" "partner_hcp" {
-  hvn_id          = hcp_hvn.partner_hvn.hvn_id
+  hvn_id          = data.hcp_hvn.partner_hvn.hvn_id
   cluster_id      = var.cluster_id
   tier            = "standard"
   public_endpoint = true
